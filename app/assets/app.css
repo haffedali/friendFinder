@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+}
+
+.user-data {
+    margin: 1rem;
+}
+
+.custom-select {
+    width: 50px;
+    margin: 2rem;
+}

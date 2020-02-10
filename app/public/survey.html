@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="../assets/app.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class='container'>
+        <h2>Survey Questions</h2>
+        <hr>
+
+        <h2>About you</h2>
+
+        <div class='user-data'>
+            <h4>Name (required)</h4>
+            <input type='text' id='user-name' >
+            <br>
+        </div>
+
+
+        <div class='user-data'>
+            <h4>Image Url (required)</h4>
+            <input type='text' id='image-url' >
+            <br>
+        </div>
+        
+        
+        <h2>Question 1</h2>
+        <div>Your mind is always buzzing with unexplored ideas and plans.</div>
+        <select class="custom-select" id='Q1'>
+            <option value="1">(Strongly disagree)</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value='4'>Four</option>
+            <option value='5'>(Strongly agree)</option>
+        </select>
+        
+        <h2>Question 2</h2>
+        <div>Generally speaking, you rely more on your experience than your imagination.</div>
+        <select class="custom-select" id='Q2'>
+            <option value="1">(Strongly disagree)</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value='4'>Four</option>
+            <option value='5'>(Strongly agree)</option>
+        </select>
+        
+        <h2>Question 3</h2>
+        <div>You find it easy to stay relaxed and focused even when there is some pressure.</div>
+        <select class="custom-select" id='Q3'>
+            <option value="1">(Strongly disagree)</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value='4'>Four</option>
+            <option value='5'>(Strongly agree)</option>
+        </select>
+        
+        <h2>Question 4</h2>
+        <div>You rarely do something just out of sheer curiosity.</div>
+        <select class="custom-select" id='Q4'>
+            <option value="1">(Strongly disagree)</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value='4'>Four</option>
+            <option value='5'>(Strongly agree)</option>
+        </select>
+        
+        <h2>Question 5</h2>
+        <div>People can rarely upset you.
+        <select class="custom-select" id='Q5'>
+            </option>
+            <option value="1">(Strongly disagree)</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value='4'>Four</option>
+            <option value='5'>(Strongly agree)</option>
+        </select>
+        
+        <h2>Question 6</h2>
+        <div>It is often difficult for you to relate to other people’s feelings.</div>
+        <select class="custom-select" id='Q6'>
+            <option value="1">(Strongly disagree)</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value='4'>Four</option>
+            <option value='5'>(Strongly agree)</option>
+        </select>
+        <h2>Question 7</h2>
+        <div>In a discussion, truth should be more important than people’s sensitivities.</div>
+        <select class="custom-select" id='Q7'>
+            <option value="1">(Strongly disagree)</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value='4'>Four</option>
+            <option value='5'>(Strongly agree)</option>
+        </select>
+        
+        <h2>Question 8</h2>
+        <div>You rarely get carried away by fantasies and ideas.</div>
+        <select class="custom-select" id='Q8'>
+            <option value="1">(Strongly disagree)</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value='4'>Four</option>
+            <option value='5'>(Strongly agree)</option>
+        </select>
+        
+        <h2>Question 9</h2>
+        <div>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</div>
+        <select class="custom-select" id='Q9'>
+            <option value="1">(Strongly disagree)</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value='4'>Four</option>
+            <option value='5'>(Strongly agree)</option>
+        </select>
+        
+        <h2>Question 10</h2>
+        <div>You feel more energetic after spending time with a group of people.</div>
+        <select class="custom-select" id='Q10'>
+            <option value="1">(Strongly disagree)</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value='4'>Four</option>
+            <option value='5'>(Strongly agree)</option>
+        </select>
+
+
+
+        <button id='submit' type ='submit' data-toggle="modal" data-target="#match-modal" class="btn btn-primary btn-lg"  role="button">Submit</button>
+    </div>
+
+
+    <div id='match-modal' class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 id='match-name' class="modal-title"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img id=match-image>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <script>
+
+        $('#submit').on('click', function(event){
+            event.preventDefault();
+
+            const user = {
+                name: $('#user-name').val().trim(),
+                image: $('#image-url').val().trim(),
+                scores: [
+                    parseInt($('#Q1').val()),
+                    parseInt($('#Q2').val()),
+                    parseInt($('#Q3').val()),
+                    parseInt($('#Q4').val()),
+                    parseInt($('#Q5').val()),
+                    parseInt($('#Q6').val()),
+                    parseInt($('#Q7').val()),
+                    parseInt($('#Q8').val()),
+                    parseInt($('#Q9').val()),
+                    parseInt($('#Q10').val())
+                ]
+            }
+
+            $.post('api/friends', user, function(data){
+                $('#match-name').text(data.name)
+                $("#match-image").attr('src', data.photo);
+            })
+        })
+       
+
+
+
+    </script>
+</body>
+
+
+</html>
